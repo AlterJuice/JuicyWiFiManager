@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/shape_rounded"
+        android:backgroundTint="@color/white_transparent"
+        android:clickable="true"
+        android:focusable="true">
+
+        <FrameLayout
+            android:id="@+id/markerItemIconFrame"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical|start"
+            android:background="@drawable/shape_circle"
+            android:backgroundTint="@color/white">
+
+            <View
+                android:id="@+id/markerItemIcon"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/place_pointer" />
+
+        </FrameLayout>
+        <TextView
+            android:id="@+id/markerItemID"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:gravity="bottom"
+            android:layout_toEndOf="@id/markerItemIconFrame"
+            android:layout_alignParentTop="true"
+            tools:text="#ID"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/markerItemTitle"
+            android:layout_toEndOf="@id/markerItemID"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_marginHorizontal="20dp"
+            android:gravity="center_vertical|start"
+            tools:text="Marker Title"
+            android:textSize="23sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/markerItemDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/markerItemIconFrame"
+            android:layout_below="@id/markerItemID"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            tools:text="DESCRIPTION DESCRIPTION DESCRIPTION DESCRIPTION DESCRIPTION DESCRIPTION DESCRIPTION DESCRIPTION DESCRIPTION DESCRIPTION DESCRIPTION DESCRIPTION DESCRIPTION "
+            android:textSize="14sp" />
+        <TextView
+            android:id="@+id/markerItemComments"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_below="@id/markerItemDescription"
+            android:layout_toEndOf="@id/markerItemIconFrame"
+            tools:text="Comments: 36"
+            android:textStyle="italic" />
+
+        <TextView
+            android:id="@+id/markerItemDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/markerItemDescription"
+            android:layout_alignParentEnd="true"
+
+            android:gravity="end"
+            tools:text="25/03/2021 13:56"
+            android:textSize="6pt"
+            android:layout_marginHorizontal="20dp"
+            android:textStyle="italic" />
+
+    </RelativeLayout>
+</layout>
