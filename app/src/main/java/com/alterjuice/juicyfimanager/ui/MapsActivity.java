@@ -1,9 +1,10 @@
-package com.alterjuice.juicyfimanager;
+package com.alterjuice.juicyfimanager.ui;
 
 import androidx.fragment.app.FragmentActivity;
 
 import android.os.Bundle;
 
+import com.alterjuice.juicyfimanager.R;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
