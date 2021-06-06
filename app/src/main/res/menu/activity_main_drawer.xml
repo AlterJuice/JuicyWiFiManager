@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_search"
+            android:icon="@drawable/ic_round_search_24"
+            android:title="@string/menu_search" />
+        <item
+            android:id="@+id/nav_add_marker"
+            android:icon="@drawable/ic_round_add_location_alt_24"
+            android:title="@string/menu_add_marker" />
+        <item
+            android:id="@+id/nav_profile"
+            android:icon="@drawable/ic_round_person_24"
+            android:title="@string/menu_profile" />
+        <item
+            android:id="@+id/tops"
+            android:icon="@drawable/ic_round_groups_24"
+            android:title="@string/menu_top" />
+        <item
+            android:id="@+id/nav_favourites"
+            android:icon="@drawable/ic_round_star_24"
+            android:title="@string/menu_favourites" />
+        <item
+            android:id="@+id/nav_public_markers"
+            android:icon="@drawable/ic_round_lock_open_24"
+            android:visible="false"
+            android:title="@string/menu_public_markers" />
+        <item
+            android:id="@+id/nav_private_markers"
+            android:icon="@drawable/ic_round_lock_24"
+            android:visible="false"
+            android:title="@string/menu_private_marker" />
+        <item
+            android:id="@+id/nav_settings"
+            android:icon="@drawable/ic_round_settings_24"
+            android:title="@string/menu_settings" />
+    </group>
+
+
+    <item android:title="@string/menu_communicate">
+        <menu>
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/ic_round_share_24"
+                android:title="@string/menu_share" />
+            <item
+                android:id="@+id/nav_send"
+                android:icon="@drawable/ic_round_attach_email_24"
+                android:title="@string/menu_send" />
+        </menu>
+    </item>
+
+</menu>

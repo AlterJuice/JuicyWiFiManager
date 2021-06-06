@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="jFi"
+            type="com.alterjuice.juicyfimanager.model.JFi" />
+    </data>
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -22,11 +27,11 @@
             android:background="@drawable/shape_circle"
             android:backgroundTint="@color/white">
 
-            <View
+            <ImageView
                 android:id="@+id/markerItemIcon"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@drawable/place_pointer" />
+                android:src="@{jFi.ge}" />
 
         </FrameLayout>
         <TextView
@@ -36,6 +41,7 @@
             android:gravity="bottom"
             android:layout_toEndOf="@id/markerItemIconFrame"
             android:layout_alignParentTop="true"
+            android:text="@{jFi.formattedID}"
             tools:text="#ID"
             android:textStyle="bold" />
 
@@ -46,6 +52,7 @@
             android:layout_height="35dp"
             android:layout_marginHorizontal="20dp"
             android:gravity="center_vertical|start"
+            android:text="@{jFi.formattedTitle}"
             tools:text="Marker Title"
             android:textSize="23sp"
             android:textStyle="bold" />
@@ -58,6 +65,7 @@
             android:layout_below="@id/markerItemID"
             android:paddingStart="10dp"
             android:paddingEnd="10dp"
+            android:text="@{jFi.formattedDescription}"
             tools:text="DESCRIPTION DESCRIPTION DESCRIPTION DESCRIPTION DESCRIPTION DESCRIPTION DESCRIPTION DESCRIPTION DESCRIPTION DESCRIPTION DESCRIPTION DESCRIPTION DESCRIPTION "
             android:textSize="14sp" />
         <TextView
@@ -67,7 +75,19 @@
             android:layout_gravity="start"
             android:layout_below="@id/markerItemDescription"
             android:layout_toEndOf="@id/markerItemIconFrame"
-            tools:text="Comments: 36"
+            android:text="@string/marker_item_comments_count"
+            tools:text="Comments:"
+            android:textStyle="italic" />
+        <TextView
+            android:paddingHorizontal="10dp"
+            android:id="@+id/markerItemCommentsCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_below="@id/markerItemDescription"
+            android:layout_toEndOf="@id/markerItemComments"
+            android:text="@{jFi.formattedCommentsCount}"
+            tools:text="36"
             android:textStyle="italic" />
 
         <TextView
@@ -80,6 +100,7 @@
             android:gravity="end"
             tools:text="25/03/2021 13:56"
             android:textSize="6pt"
+            android:text="@{jFi.formattedDate}"
             android:layout_marginHorizontal="20dp"
             android:textStyle="italic" />
 

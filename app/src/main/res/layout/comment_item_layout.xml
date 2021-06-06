@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="comment"
+            type="com.alterjuice.juicyfimanager.model.Comment" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="5dp"
+        android:background="@drawable/shape_rounded"
+        android:backgroundTint="@color/white_bone"
+        android:clickable="true"
+        android:layout_margin="2dp"
+        android:padding="0dp">
+
+        <TextView
+            android:id="@+id/commentAuthorNameLetter"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:background="@drawable/shape_circle"
+            tools:backgroundTint="#123123"
+            android:gravity="center"
+            android:maxLength="1"
+            android:textSize="15pt"
+            android:elevation="3dp"
+            android:text="@{comment.authorLetter}"
+            tools:text="@tools:sample/first_names" />
+
+        <TextView
+            android:id="@+id/commentAuthorName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/commentAuthorNameLetter"
+            android:gravity="center_vertical|start"
+            android:paddingHorizontal="10dp"
+            android:textSize="21sp"
+            android:textStyle="bold"
+            android:text="@{comment.commentAuthorName}"
+            tools:text="@tools:sample/full_names" />
+
+        <TextView
+            android:id="@+id/commentText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/commentAuthorName"
+            android:layout_toEndOf="@id/commentAuthorNameLetter"
+            android:maxLength="600"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:textSize="14sp"
+            android:maxLines="20"
+            android:text="@{comment.commentText}"
+            tools:text="@tools:sample/lorem/random" />
+
+        <TextView
+            android:id="@+id/commentDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/commentText"
+            android:layout_alignParentEnd="true"
+            android:paddingHorizontal="10dp"
+            android:textSize="12sp"
+            android:textStyle="italic"
+            android:text="@{comment.formattedDate}"
+            tools:text="@tools:sample/date/mmddyy" />
+    </RelativeLayout>
+</layout>
