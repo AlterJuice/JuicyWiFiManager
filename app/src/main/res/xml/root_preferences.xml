@@ -1,6 +1,6 @@
 <PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <PreferenceCategory app:title="@string/messages_header">
+    <PreferenceCategory app:title="@string/settings_header_general">
 
         <EditTextPreference
             app:key="signature"
@@ -8,20 +8,28 @@
             app:useSimpleSummaryProvider="true" />
 
         <ListPreference
-            app:defaultValue="reply"
-            app:entries="@array/reply_entries"
-            app:entryValues="@array/reply_values"
-            app:key="reply"
-            app:title="@string/reply_title"
+            app:defaultValue="EN"
+            app:entries="@array/language_keys"
+            app:entryValues="@array/language_values"
+            app:title="@string/settings_action_change_language"
             app:useSimpleSummaryProvider="true" />
 
     </PreferenceCategory>
 
-    <PreferenceCategory app:title="@string/sync_header">
+    <PreferenceCategory app:title="@string/settings_header_profile">
+        <Preference
+            app:key="profile_clear_cache"
+            app:icon="@drawable/icon_delete_sweep"
+            app:title="@string/settings_action_clear_cache"
+            app:summary="@string/settings_summary_clear_cache"
+            />
+        <Preference
+            app:key="profile_log_out"
+            app:title="@string/settings_action_logout"
+            app:summary="@string/settings_summary_logout_account"
+            app:icon="@drawable/exit_logout_app"
+            />
 
-        <SwitchPreferenceCompat
-            app:key="sync"
-            app:title="@string/sync_title" />
 
         <SwitchPreferenceCompat
             app:dependency="sync"

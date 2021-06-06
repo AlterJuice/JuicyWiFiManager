@@ -9,4 +9,14 @@
         <item>reply</item>
         <item>reply_all</item>
     </string-array>
+
+    <string-array name="language_keys">
+        <item>🇷🇺 Russian</item>
+        <item>🇺🇸 English</item>
+    </string-array>
+
+    <string-array name="language_values">
+        <item>RU</item>
+        <item>EN</item>
+    </string-array>
 </resources>
