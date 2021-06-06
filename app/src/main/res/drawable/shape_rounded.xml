@@ -8,5 +8,5 @@
         android:bottom="2dp"/>
 
     <corners
-        android:radius="@dimen/cornerRadius" />
+        android:radius="@dimen/shapeRadius" />
 </shape>

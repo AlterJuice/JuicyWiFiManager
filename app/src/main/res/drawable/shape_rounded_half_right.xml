@@ -8,7 +8,7 @@
         android:right="2dp"
         android:top="2dp" />
     <corners
-        android:topRightRadius="@dimen/cornerHalfRadius"
-        android:bottomRightRadius="@dimen/cornerHalfRadius" />
+        android:topRightRadius="@dimen/shapeRadius"
+        android:bottomRightRadius="@dimen/shapeRadius" />
 
 </shape>
